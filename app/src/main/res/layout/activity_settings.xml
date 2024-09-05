@@ -1,0 +1,72 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar at the top with fixed height -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Main content area with RadioGroup and Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="56dp"> <!-- Added margin to push content below the toolbar -->
+
+        <!-- RadioGroup for selecting country -->
+        <RadioGroup
+            android:id="@+id/country_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- RadioButton options for countries -->
+            <RadioButton
+                android:id="@+id/radio_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All countries"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/radio_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="United States"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/radio_gb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="United Kingdom"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/radio_ca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Canada"
+                android:textSize="22sp" />
+
+        </RadioGroup>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</FrameLayout>
